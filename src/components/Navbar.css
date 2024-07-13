@@ -1,0 +1,157 @@
+:root {
+  --dark-grey-1: #424242;
+  --dark-grey-2: #2C2A2A;
+  --dark-grey-3: #3C3C3C;
+  --dark-grey-4: #414141;
+  --dark-grey-5: #373737;
+  --black-1: #252525;
+  --black-2: #202020;
+  --black-3: #131313;
+  --white-1: #FFFFFF;
+  --white-2: #EDEDED;
+  --white-3: #F2F2F2;
+  --white-4: #FAFAFA;
+  --yellow-1: #F9ED32;
+  --yellow-2: #FFF225;
+}
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Poppins:wght@300;400;700&display=swap');
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+.menu-items .nav-link {
+  font-size: 20px; 
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: var(--dark-grey-1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  z-index: 1000;
+}
+
+.logo {
+  height: 60px;
+  margin-right: auto;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: var(--white-1);
+  margin: 4px 0;
+  
+}
+
+.close-btn {
+  display: none;
+  font-size: 2rem;
+  color: var(--white-1);
+  cursor: pointer;
+}
+
+.menu-items {
+  display: flex;
+  align-items: center;
+}
+
+.menu-items .nav-link {
+  color: var(--white-1);
+  text-decoration: none;
+  margin: 0 1rem;
+  position: relative;
+}
+
+.menu-items .nav-link:hover {
+  color: var(--yellow-1);
+}
+
+.dropdown {
+  display: none; 
+  position: absolute;
+  top:  1rem;
+  left: 0;
+  background: var(--dark-grey-2);
+  flex-direction: column;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+ 
+}
+
+.dropdown a {
+  color: var(--white-1);
+  padding: 0.5rem 0;
+  text-decoration: none;
+}
+
+.dropdown a:hover {
+  color: var(--yellow-1);
+
+}
+
+.menu-items .nav-link:hover .dropdown {
+  display: flex;
+  
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+}
+
+.social-icons a {
+  color: var(--white-1);
+  font-size: 1.8rem;
+  margin-left: 1rem;
+}
+
+.social-icons a:hover {
+  color: var(--yellow-1);
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .menu-items {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: var(--dark-grey-3);
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+
+  .menu-items.nav-mobile {
+    display: flex;
+  }
+
+  .close-btn {
+    display: block;
+    align-self: flex-end;
+    padding: 1rem;
+  }
+
+  .menu-items .nav-link {
+    margin: 1rem 0;
+  }
+
+  .nav.mobile-open .menu-items {
+    display: flex;
+  }
+}

@@ -1,0 +1,72 @@
+/* About.css */
+
+.about {
+  max-width: 1200px;
+  margin: 110px auto; 
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+
+.about .heading {
+  text-align: center;
+  font-size: 2.5em;
+  color: #424242;
+  margin-bottom: 20px;
+}
+
+.about .heading:hover {
+color :#9c8c8c;
+}
+
+
+.about .para {
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: #555;
+  text-align: justify;
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-left: 5px solid #3b5998;
+}
+
+/* Style for images */
+.about img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  margin: 10px 0;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.about img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Zigzag layout for larger screens */
+@media (min-width: 768px) {
+  .about img:nth-child(odd) {
+      float: left;
+      margin-right: 20px;
+  }
+   .about {
+    margin-top: 218px;
+   }
+
+  .about img:nth-child(even) {
+      float: right;
+      margin-left: 20px;
+  }
+}
+
+
+.about::after {
+  content: "";
+  display: table;
+  clear: both;
+}

@@ -1,0 +1,67 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Poppins:wght@300;400;700&display=swap');
+
+:root {
+  --dark-grey-1: #424242;
+  --dark-grey-2: #2C2A2A;
+  --dark-grey-3: #3C3C3C;
+  --dark-grey-4: #414141;
+  --dark-grey-5: #373737;
+  --black-1: #252525;
+  --black-2: #202020;
+  --black-3: #131313;
+  --white-1: #FFFFFF;
+  --white-2: #EDEDED;
+  --white-3: #F2F2F2;
+  --white-4: #FAFAFA;
+  --yellow-1: #F9ED32;
+  --yellow-2: #FFF225;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: var(--white-3);
+  margin: 0;
+  padding: 0;
+  
+}
+
+.page-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin-top: 170px;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.card {
+  background-color: var(--white-1);
+  border: 1px solid var(--dark-grey-2);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px var(--dark-grey-3);
+  padding: 30px;
+  max-width: 800px;
+  width: 100%;
+}
+
+.card-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  color: var(--black-1);
+  font-size: 3rem; 
+}
+
+.card-text {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  color: var(--black-2);
+  font-size: 1.6rem; 
+  margin-top: 20px; 
+}
